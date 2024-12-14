@@ -4,35 +4,37 @@ import logo from "../../assets/logo.png";
 import { IoCartOutline } from "react-icons/io5";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
-
-const navOptions = [
-  {
-    label: "Home",
-    path: "/",
-  },
-  {
-    label: "Shop",
-    path: "/shop",
-  },
-  {
-    label: "FAQ",
-    path: "/f-a-q",
-  },
-  {
-    label: "About Us",
-    path: "/aboutUs",
-  },
-  {
-    label: "Contact Us",
-    path: "/contactUs",
-  },
-];
+import { Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [shopCategories, setShopCategories] = useState([]);
   const menuRef = useRef(null);
 
+  const data = [
+    { id: 1, name: "THCA Flower" },
+    { id: 2, name: "THCA Flower Ounces" },
+    { id: 3, name: "White Label THCA" },
+  ];
+
   useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        setShopCategories(
+          data.map((category) => ({
+            id: category.id,
+            name: category.name,
+            path: `/shop/category/${category.id}`,
+          }))
+        );
+      } catch (error) {
+        console.error("Error fetching shop categories:", error);
+      }
+    };
+
+    fetchCategories();
+
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsMenuOpen(false);
@@ -45,6 +47,33 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const navOptions = [
+    { label: "Home", path: "/" },
+    {
+      label: (
+        <Dropdown
+          overlay={
+            <Menu>
+              {shopCategories.map((category) => (
+                <Menu.Item key={category.id}>
+                  <NavLink to={category.path}>{category.name}</NavLink>
+                </Menu.Item>
+              ))}
+            </Menu>
+          }
+          trigger={["click"]}
+        >
+          <a onClick={(e) => e.preventDefault()}>
+            Shop <DownOutlined />
+          </a>
+        </Dropdown>
+      ),
+    },
+    { label: "FAQ", path: "/f-a-q" },
+    { label: "About Us", path: "/aboutUs" },
+    { label: "Contact Us", path: "/contactUs" },
+  ];
 
   return (
     <div className="navbar flex px-5 lg:px-20 py-5 bg-[#F9FDF9] justify-between items-center relative">

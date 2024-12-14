@@ -2,16 +2,20 @@ import secImg from "../../assets/aboutUsImg.png";
 
 const AboutUsSection = () => {
   return (
-    <div className="relative p-28">
+    <div className="relative p-6 md:p-28">
       <div className="absolute inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
 
-      <div className="flex items-center justify-center gap-5 relative">
-        <img className="w-[450px] h-[300px]" src={secImg} alt="" />
+      <div className="md:flex items-center justify-center gap-5 relative">
+        <img
+          className="md:w-[450px] md:h-[300px] shadow-xl"
+          src={secImg}
+          alt=""
+        />
         <div>
-          <h1 className="text-3xl mb-3 font-fontOne font-bold">
+          <h1 className="md:text-3xl text-2xl mb-3 clash mt-5 text-center md:text-left font-bold">
             <span className="text-[#00863D]">About</span> Us
           </h1>
-          <p className="w-[90%]">
+          <p className=" text-justify">
             we are a leading supplier of high-quality THCA hemp flower,
             specializing in wholesale distribution for retailers and businesses.
             We offer a wide range of premium THCA strains in bulk, from pounds

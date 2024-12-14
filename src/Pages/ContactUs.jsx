@@ -1,8 +1,127 @@
+import { PiPhoneDisconnectFill } from "react-icons/pi";
+import TitleBg from "../Components/ui/TitleBg";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
+import { Button, Form, Input } from "antd";
+
 const ContactUs = () => {
+  const [form] = Form.useForm();
+
+  const onFinish = (values) => {
+    console.log("Form Values:", values);
+  };
+
   return (
-    <div>
-      <h1>This is ContactUs component.</h1>
-    </div>
+    <>
+      <TitleBg title="Contact Us" />
+      <div className="relative min-h-screen">
+        <div className="absolute h-full inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
+        <div className="my-20">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 md:px-20 px-10">
+            <div className="flex flex-col p-5 rounded-2xl border gap-5 items-center justify-center shadow-xl border-t-8 border-t-[#004620]">
+              <div className="bg-gray-100 p-5 rounded-full">
+                <PiPhoneDisconnectFill className="text-[#0caf55]" size={50} />
+              </div>
+              <h1 className="text-2xl mt-3 font-semibold">Phone Number</h1>
+              <p>64655165468</p>
+              <p>64655165468</p>
+            </div>
+            <div className="flex flex-col p-5 rounded-2xl border gap-5 items-center justify-center shadow-xl border-t-8 border-t-[#004620]">
+              <div className="bg-gray-100 p-5 rounded-full">
+                <MdEmail className="text-[#0caf55]" size={50} />
+              </div>
+              <h1 className="text-2xl mt-3 font-semibold">Email</h1>
+              <p>demo@email.com</p>
+              <p>demo@email.com</p>
+            </div>
+            <div className="flex flex-col p-5 rounded-2xl border gap-5 items-center justify-center shadow-xl border-t-8 border-t-[#004620]">
+              <div className="bg-gray-100 p-5 rounded-full">
+                <FaLocationDot className="text-[#0caf55]" size={50} />
+              </div>
+              <h1 className="text-2xl mt-3 font-semibold">Address</h1>
+              <p>Royal Ln. Mesa, New Jersey 45463</p>
+              <p>Thornridge Cir. Shiloh, Hawaii 81063</p>
+            </div>
+          </div>
+          <div className="md:w-[50%] w-[80%] mx-auto my-20 mb-40">
+            <div className="bg-[#033F1B] pb-10 md:pt-20 pt-5 md:px-16 px-7 rounded-2xl shadow-lg">
+              <div className="text-center space-y-3 mb-6">
+                <h2 className="text-2xl text-[#FCD707] font-bold text-center">
+                  Get In Touch <span className="text-white">With Us</span>
+                </h2>
+                <p className="text-white">
+                  We’ll get back to you as soon as possible.
+                </p>
+              </div>
+              <Form
+                form={form}
+                layout="vertical"
+                onFinish={onFinish}
+                className="space-y-4"
+              >
+                {/* Full Name */}
+                <Form.Item
+                  name="fullName"
+                  label={<span className="text-white">Full Name</span>}
+                  rules={[
+                    { required: true, message: "Please enter your full name" },
+                  ]}
+                >
+                  <Input placeholder="Enter your full name" />
+                </Form.Item>
+
+                {/* Email */}
+                <Form.Item
+                  name="email"
+                  label={<span className="text-white">Email</span>}
+                  rules={[
+                    { required: true, message: "Please enter your email" },
+                  ]}
+                >
+                  <Input type="email" placeholder="Enter your email" />
+                </Form.Item>
+
+                {/* Phone Number */}
+                <Form.Item
+                  name="phone"
+                  label={<span className="text-white">Phone Number</span>}
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your phone number",
+                    },
+                  ]}
+                >
+                  <Input placeholder="Enter your phone number" />
+                </Form.Item>
+
+                {/* Message */}
+                <Form.Item
+                  name="message"
+                  label={<span className="text-white">Message</span>}
+                  rules={[
+                    { required: true, message: "Please enter your message" },
+                  ]}
+                >
+                  <Input.TextArea rows={4} placeholder="Enter your message" />
+                </Form.Item>
+
+                {/* Submit Button */}
+                <Form.Item>
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="w-full bg-[#0c9b45] font-semibold text-white py-5"
+                  >
+                    Send Message
+                  </Button>
+                </Form.Item>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

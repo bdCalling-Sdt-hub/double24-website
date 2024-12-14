@@ -6,19 +6,23 @@ import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <div className="relative h-[700px]">
+    <div className="relative md:h-[700px]">
       <div>
-        <img className="h-[700px] w-full object-cover" src={bannerBg} alt="" />
+        <img
+          className="md:h-[700px] w-full object-cover"
+          src={bannerBg}
+          alt=""
+        />
       </div>
       <div className="absolute top-0 md:pt-56 pt-6 bg-[#0c2919] bg-opacity-80 h-full w-full">
         <div className="text-center text-white">
           <h1
-            className="md:text-6xl font-fontOne font-semibold
+            className="md:text-6xl text-2xl clash
            text-[#FFC313]"
           >
             Premium Hemp Products
           </h1>
-          <h1 className="md:text-6xl font-fontOne font-semibold mb-1 md:my-4">
+          <h1 className="md:text-6xl text-2xl clash mb-1 md:my-4">
             for a Healthier Lifestyle
           </h1>
           <p className="md:text-xl text-sm mx-auto font-fontThree w-[70%] md:w-[65%]">

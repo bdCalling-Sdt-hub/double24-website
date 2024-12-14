@@ -4,8 +4,7 @@ const CategorySection = () => {
   const categories = [
     {
       id: 1,
-      imgSrc:
-        "https://masterpiecer-images.s3.yandex.net/c0e41fe67dce11eea16a222e7fa838a6:upscaled",
+      imgSrc: "https://i.ibb.co.com/wgMzVNv/Frame-1707481877.png",
       label: "WHOLESALE",
       title: "Title sdfvgkj soid",
       description:
@@ -13,17 +12,15 @@ const CategorySection = () => {
     },
     {
       id: 2,
-      imgSrc:
-        "https://masterpiecer-images.s3.yandex.net/c0e41fe67dce11eea16a222e7fa838a6:upscaled",
-      label: "RETAIL",
+      imgSrc: "https://i.ibb.co.com/8dJd8Dx/Frame-1707481877-1.png",
+      label: "WHOLESALE",
       title: "Another Title",
       description:
         "Discover exclusive retail products with the finest quality and value.",
     },
     {
       id: 3,
-      imgSrc:
-        "https://masterpiecer-images.s3.yandex.net/c0e41fe67dce11eea16a222e7fa838a6:upscaled",
+      imgSrc: "https://i.ibb.co.com/DLKPNvD/Frame-1707481877-2.png",
       label: "WHOLESALE",
       title: "Third Title Example",
       description:
@@ -32,27 +29,29 @@ const CategorySection = () => {
   ];
 
   return (
-    <div className="p-20">
-      <h1 className="text-4xl my-8 font-bold font-fontOne">
+    <div className="md:p-20 mx-10 md:px-28">
+      <h1 className="md:text-4xl md:text-start text-2xl text-center my-8 font-bold clash">
         Browse <span className="text-[#00863D]">Categories</span>
       </h1>
       <div>
-        <div className="grid grid-cols-3 gap-20">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
           {categories.map((category) => (
             <div
               key={category.id}
-              className="p-3 border md:w-[384px] rounded-2xl"
+              className="p-3 border rounded-2xl shadow-xl hover:shadow-2xl"
             >
               <img
-                className="w-full rounded-2xl h-72"
+                className="w-full rounded-2xl h-56"
                 src={category.imgSrc}
                 alt={category.title}
               />
-              <p className="bg-[#FFC313] py-1 px-3 my-3 rounded-3xl w-[35%]">
+              <p className="bg-[#FFC313] py-1 px-3 my-3 rounded-3xl w-[40%]">
                 {category.label}
               </p>
-              <h1 className="text-2xl font-bold">{category.title}</h1>
-              <p className="my-3">{category.description}</p>
+              <h1 className="md:text-2xl text-xl font-bold">
+                {category.title}
+              </h1>
+              <p className="my-3 line-clamp-2">{category.description}</p>
               <Button className="bg-[#00863D] w-full font-semibold text-white text-xl py-5 rounded-xl">
                 SHOP NOW
               </Button>
