@@ -14,10 +14,10 @@ const ContactUs = () => {
   return (
     <>
       <TitleBg title="Contact Us" />
-      <div className="relative min-h-screen">
+      <div className="relative h-[1650px] md:h-[1100px]">
         <div className="absolute h-full inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
-        <div className="my-20">
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 md:px-20 px-10">
+        <div className="min-h-screen mt-20">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 md:px-20 my-20 px-10">
             <div className="flex flex-col p-5 rounded-2xl border gap-5 items-center justify-center shadow-xl border-t-8 border-t-[#004620]">
               <div className="bg-gray-100 p-5 rounded-full">
                 <PiPhoneDisconnectFill className="text-[#0caf55]" size={50} />
@@ -43,7 +43,7 @@ const ContactUs = () => {
               <p>Thornridge Cir. Shiloh, Hawaii 81063</p>
             </div>
           </div>
-          <div className="md:w-[50%] w-[80%] mx-auto my-20 mb-40">
+          <div className="md:w-[50%] w-[80%] mx-auto">
             <div className="bg-[#033F1B] pb-10 md:pt-20 pt-5 md:px-16 px-7 rounded-2xl shadow-lg">
               <div className="text-center space-y-3 mb-6">
                 <h2 className="text-2xl text-[#FCD707] font-bold text-center">

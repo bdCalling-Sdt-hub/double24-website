@@ -86,7 +86,7 @@ const FAQSection = () => {
       <div className="md:my-5 my-2 text-center w-full">
         <Link to={"/f-a-q"}>
           <Button className="bg-[#00863D] text-white  py-6 md:py-5 border-[#00863D] font-semibold">
-            Shop Now
+            See All
             <span>
               <img src={buttonLogo} alt="" />
             </span>

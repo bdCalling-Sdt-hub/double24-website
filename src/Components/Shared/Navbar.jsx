@@ -64,9 +64,9 @@ const Navbar = () => {
           }
           trigger={["click"]}
         >
-          <a onClick={(e) => e.preventDefault()}>
+          <span className="dropdown-link">
             Shop <DownOutlined />
-          </a>
+          </span>
         </Dropdown>
       ),
     },
@@ -76,7 +76,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="navbar flex px-5 lg:px-20 py-5 bg-[#F9FDF9] justify-between items-center relative">
+    <div className="navbar flex px-5 lg:px-20 py-5 bg-[#f3faf3] justify-between items-center relative">
+      {/* Mobile menu toggle */}
       <button
         className="lg:hidden z-50"
         onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -84,34 +85,49 @@ const Navbar = () => {
         {isMenuOpen ? <HiX size={30} /> : <HiOutlineMenuAlt3 size={30} />}
       </button>
 
+      {/* Logo */}
       <img
         src={logo}
         alt="logo"
         className="logo absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none"
       />
 
+      {/* Nav Menu */}
       <div
         ref={menuRef}
-        className={`absolute lg:relative top-16 left-0 lg:top-0 lg:left-auto w-full lg:w-auto lg:flex flex-col lg:flex-row bg-[#F9FDF9] lg:bg-yellow-100 shadow-lg lg:shadow-none p-5 lg:p-2 lg:rounded-2xl space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 z-50 ${
+        className={`absolute lg:relative top-16 left-0 lg:top-0 lg:left-auto w-full lg:w-auto lg:flex flex-col lg:flex-row bg-[#F9FDF9] lg:bg-yellow-50 shadow-lg lg:shadow-none p-5 lg:p-2 lg:rounded-2xl space-y-4 lg:space-y-0 lg:space-x-6 transition-all duration-300 z-50 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        {navOptions.map((option, index) => (
-          <NavLink
-            key={index}
-            to={option.path}
-            className={({ isActive }) =>
-              `nav-link flex flex-col px-3 py-1 rounded-lg ${
-                isActive ? "bg-[#FFC313]" : "hover:bg-gray-200"
-              }`
-            }
-            onClick={() => setIsMenuOpen(false)}
-          >
-            {option.label}
-          </NavLink>
-        ))}
+        {navOptions.map((option, index) => {
+          if (!option.path) {
+            // Render the "Shop" dropdown without a NavLink
+            return (
+              <div key={index} className="nav-link flex flex-col px-3 py-1">
+                {option.label}
+              </div>
+            );
+          }
+          // Render other navigable items
+          return (
+            <NavLink
+              key={index}
+              to={option.path}
+              className={({ isActive }) =>
+                `nav-link flex flex-col items-center justify-center px-3 py-1 rounded-lg ${
+                  isActive ? "bg-[#FFC313]" : "hover:bg-gray-200"
+                }`
+              }
+              end
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {option.label}
+            </NavLink>
+          );
+        })}
       </div>
 
+      {/* Right Icons */}
       <div className="nav-icons flex gap-4">
         <NavLink to="/favorites">
           <FaRegHeart size={24} />
