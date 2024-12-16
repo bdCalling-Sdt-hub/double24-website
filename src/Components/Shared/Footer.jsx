@@ -6,8 +6,8 @@ import { Button, Input } from "antd";
 
 const Footer = () => {
   return (
-    <>
-      <div className="md:h-[350px] md:pt-28 pt-10 bg-[#173616] text-white">
+    <div className=" bg-[#173616]">
+      <div className="md:h-[350px] md:pt-28 pt-10 text-white max-w-7xl mx-auto">
         <div className="md:flex md:px-20 px-10 items-start justify-center gap-9">
           <div>
             <img className="mb-5" src={logo} alt="logo" />
@@ -25,7 +25,7 @@ const Footer = () => {
               <div className="border border-white p-2 rounded-md">
                 <FaInstagram />
               </div>
-              <div className="border border-white p-2 rounded-md">
+              <div className="border  border-white p-2 rounded-md">
                 <FaLinkedinIn />
               </div>
             </div>
@@ -85,7 +85,7 @@ const Footer = () => {
       <div className="flex py-5 bg-[#173616] text-gray-400 border-t-2 border-gray-700 items-end justify-center">
         <p>All right reserved The Cannabis Club © 2024</p>
       </div>{" "}
-    </>
+    </div>
   );
 };
 

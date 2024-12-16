@@ -49,11 +49,30 @@ const products = [
     description: "Hybrid | 21.20% THCa | HP, LB",
     price: "$700 - $950",
   },
+  {
+    id: 5,
+    image: productImg1,
+    label: "ORGANIC",
+    title: "Gelato",
+    description: "Hybrid | 21.20% THCa | HP, LB",
+    price: "$700 - $950",
+  },
+  {
+    id: 6,
+    image: productImg1,
+    label: "ORGANIC",
+    title: "Gelato",
+    description: "Hybrid | 21.20% THCa | HP, LB",
+    price: "$700 - $950",
+  },
 ];
 
 const Shop = () => {
-  const [swiperRef, setSwiperRef] = useState(null);
   const { id } = useParams();
+  const [categoryId, setCategoryId] = useState(id);
+  const [swiperRef, setSwiperRef] = useState(null);
+
+  console.log(categoryId);
 
   return (
     <>
@@ -78,93 +97,98 @@ const Shop = () => {
         </div>
       </div>
 
-      {/* category 1 */}
+      <div className="bg-white py-14">
+        {/* category 1 */}
+        <div className="px-20 bg-white">
+          <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
+            <span className="text-[#00863D]">Premium</span> THCA Flower
+          </h1>
 
-      <div className="p-20 bg-white">
-        <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
-          <span className="text-[#00863D]">Premium</span> THCA Flower
-        </h1>
+          <Swiper
+            onSwiper={setSwiperRef}
+            slidesPerView={4}
+            centeredSlides={true}
+            spaceBetween={200}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  image={product?.image}
+                  label={product?.label}
+                  title={product?.title}
+                  description={product?.description}
+                  price={product?.price}
+                  categoryId={categoryId}
+                  productId={product?.id}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        {/* category 2 */}
 
-        <Swiper
-          onSwiper={setSwiperRef}
-          slidesPerView={4}
-          centeredSlides={true}
-          spaceBetween={200}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <ProductCard
-                image={product?.image}
-                label={product?.label}
-                title={product?.title}
-                description={product?.description}
-                price={product?.price}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      {/* category 2 */}
+        <div className="px-20 bg-white">
+          <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
+            <span className="text-[#00863D]">Featured</span> Strains
+          </h1>
 
-      <div className="p-20 bg-white">
-        <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
-          <span className="text-[#00863D]">Featured</span> Strains
-        </h1>
+          <Swiper
+            onSwiper={setSwiperRef}
+            slidesPerView={4}
+            centeredSlides={true}
+            spaceBetween={200}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  image={product?.image}
+                  label={product?.label}
+                  title={product?.title}
+                  description={product?.description}
+                  price={product?.price}
+                  categoryId={categoryId}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        {/* category 3 */}
 
-        <Swiper
-          onSwiper={setSwiperRef}
-          slidesPerView={4}
-          centeredSlides={true}
-          spaceBetween={200}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <ProductCard
-                image={product?.image}
-                label={product?.label}
-                title={product?.title}
-                description={product?.description}
-                price={product?.price}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      {/* category 3 */}
+        <div className="px-20 bg-white">
+          <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
+            THCA <span className="text-[#00863D]">Flower Shake</span>
+          </h1>
 
-      <div className="p-20 bg-white">
-        <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
-          THCA <span className="text-[#00863D]">Flower Shake</span>
-        </h1>
-
-        <Swiper
-          onSwiper={setSwiperRef}
-          slidesPerView={4}
-          centeredSlides={true}
-          spaceBetween={200}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <ProductCard
-                image={product?.image}
-                id={product.id}
-                label={product?.label}
-                title={product?.title}
-                description={product?.description}
-                price={product?.price}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <Swiper
+            onSwiper={setSwiperRef}
+            slidesPerView={4}
+            centeredSlides={true}
+            spaceBetween={200}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {products.map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  image={product?.image}
+                  id={product.id}
+                  label={product?.label}
+                  title={product?.title}
+                  description={product?.description}
+                  price={product?.price}
+                  categoryId={categoryId}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </>
   );

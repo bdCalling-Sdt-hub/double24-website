@@ -2,15 +2,19 @@ import { Button } from "antd";
 import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router";
 
-const ProductCard = ({ image, label, title, description, price, id }) => {
+const ProductCard = ({
+  image,
+  label,
+  title,
+  description,
+  price,
+  categoryId,
+  productId,
+}) => {
   return (
-    <div className="border min-w-[300px] max-w-[500px] h-[535px] rounded-2xl m-10 p-2 flex items-start flex-col">
-      <div className="relative">
-        <img
-          className="w-full rounded-t-2xl h-[190px] object-cover"
-          src={image}
-          alt={title}
-        />
+    <div className="border min-w-[300px] max-w-[600px] h-[455px] rounded-2xl m-10 p-2 flex items-start flex-col">
+      <div className="relative w-full">
+        <img className="w-full h-52 rounded-t-2xl" src={image} alt={title} />
         <div className="p-1 border absolute bg-[#e8f7ee] top-5 right-5 rounded-full z-10">
           <CiHeart size={20} />
         </div>
@@ -25,7 +29,7 @@ const ProductCard = ({ image, label, title, description, price, id }) => {
       {/* Spacer to push the button to the bottom */}
       <div className="flex-grow"></div>
 
-      <Link to={`/shop/category/${id}/${id}`}>
+      <Link to={`/shop/category/${categoryId}/${productId}`}>
         <Button className="bg-[#00863D] w-full mt-2 py-4 text-white">
           SHOP NOW
         </Button>
