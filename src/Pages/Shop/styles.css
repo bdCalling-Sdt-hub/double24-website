@@ -43,6 +43,7 @@ body {
   width: 100%;
   height: 600px;
   margin: 20px auto;
+  padding: 0 0 0 100px;
   background-color: #fff;
 }
 .append-buttons {
@@ -52,11 +53,36 @@ body {
 .append-buttons button {
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #007aff;
-  color: #007aff;
+  border: 1px solid #005125;
+  color: #005125;
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 4px;
   margin: 0 10px;
   font-size: 13px;
+}
+
+/* Change color of left arrow */
+.swiper-button-prev {
+  color: #00863d; /* Change this to your desired color */
+}
+
+/* Change color of right arrow */
+.swiper-button-next {
+  color: #00863d; /* Change this to your desired color */
+}
+
+/* Optional: Change the size of the arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  font-size: 24px; /* Adjust arrow size */
+  width: 20px;
+  height: 20px;
+  opacity: 0.2;
+}
+
+/* Optional: Add a hover effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #00522a; /* Darker green on hover */
 }

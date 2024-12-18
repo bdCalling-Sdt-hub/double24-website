@@ -1,6 +1,7 @@
 import { Collapse } from "antd";
 import { useState } from "react";
 import TitleBg from "../Components/ui/TitleBg";
+import { Helmet } from "react-helmet-async";
 
 const FAQ = () => {
   const [activePanel, setActivePanel] = useState(null);
@@ -67,8 +68,11 @@ const FAQ = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>FAQ - Doublet24</title>
+      </Helmet>
       <TitleBg title={"FAQs"} />
-      <div className="md:p-20 p-8 md:px-40">
+      <div className="md:p-20 p-8 md:px-40 max-w-7xl mx-auto">
         <h1 className="md:text-4xl text-2xl mb-10 text-center font-bold">
           Frequently Asked <span className="text-[#00863D]">Questions</span>
         </h1>

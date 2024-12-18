@@ -6,6 +6,7 @@ import productImg2 from "../assets/Frame 1000011859.png";
 import productImg3 from "../assets/Frame 1707481910.png";
 import productImg4 from "../assets/Frame 1707481911.png";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 
 const Cart = () => {
   // Cart state
@@ -145,17 +146,21 @@ const Cart = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Cart - Doublet24</title>
+      </Helmet>
       <TitleBg title="CART" />
-      <div className="p-20 flex gap-10 w-full">
-        <div className="w-[70%]">
+      <div className="md:p-20 max-w-7xl mx-auto p-5 md:flex gap-10 w-full">
+        <div className="md:w-[70%]">
           <Table
             className="border-t-8 border-t-[#173616] rounded-2xl"
             dataSource={cart}
             columns={columns}
             pagination={false}
+            scroll={{ x: 700 }}
           />
         </div>
-        <div className="w-[30%] border-t-8  border-t-[#173616] bg-white rounded-2xl">
+        <div className="md:w-[30%] border-t-8 mt-10 md:mt-0 border-t-[#173616] bg-white rounded-2xl">
           <div className=" p-6 ">
             <h1 className="text-2xl font-bold mb-4 border-b-2 pb-3">
               Cart Total

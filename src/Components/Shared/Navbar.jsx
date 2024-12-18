@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import { IoCartOutline } from "react-icons/io5";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
-import { Menu, Dropdown } from "antd";
+import { Menu, Dropdown, Badge } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
@@ -130,11 +130,15 @@ const Navbar = () => {
 
         {/* Right Icons */}
         <div className="nav-icons flex gap-4">
-          <NavLink to="/favorites">
-            <FaRegHeart size={24} />
+          <NavLink to="/favorite">
+            <Badge count={5}>
+              <FaRegHeart size={24} />
+            </Badge>
           </NavLink>
           <NavLink to="/cart">
-            <IoCartOutline size={24} />
+            <Badge count={4}>
+              <IoCartOutline size={24} />
+            </Badge>
           </NavLink>
         </div>
       </div>

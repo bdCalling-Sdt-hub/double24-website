@@ -13,8 +13,8 @@ const ContactUsSection = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="md:h-[700px] w-full md:flex bg-[#033F1B]">
+    <div className="relative  bg-[#033F1B]">
+      <div className="md:h-[670px] max-w-7xl mx-auto md:flex">
         <div className="md:w-6/12 md:pt-36 pt-10 md:ps-28 ps-10 md:pe-10">
           <div className="text-white clash md:text-4xl text-2xl">
             <h1>

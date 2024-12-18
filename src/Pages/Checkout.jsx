@@ -6,6 +6,8 @@ import productImg2 from "../assets/Frame 1000011859.png";
 import productImg3 from "../assets/Frame 1707481910.png";
 import productImg4 from "../assets/Frame 1707481911.png";
 import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 
 const Checkout = () => {
   const [cart, setCart] = useState([
@@ -63,15 +65,18 @@ const Checkout = () => {
 
   return (
     <div className="bg-white">
+      <Helmet>
+        <title>Checkout - Doublet24</title>
+      </Helmet>
       <TitleBg title="CHECKOUT" />
       <div>
-        <div className="p-10">
+        <div className="p-10 max-w-7xl mx-auto">
           <Form
             layout="vertical"
-            className="w-full flex gap-5"
+            className="w-full md:flex gap-5"
             onFinish={onFinish}
           >
-            <div className="w-[70%] p-10">
+            <div className="md:w-[70%] md:p-10">
               <h2 className="text-lg mb-4">Billing Information</h2>
               <Form.Item
                 label="Full Name"
@@ -125,7 +130,7 @@ const Checkout = () => {
               </Form.Item>
             </div>
 
-            <div className="w-[30%] border border-t-8 border-t-[#005125] rounded-2xl p-1">
+            <div className="md:w-[30%] border border-t-8 border-t-[#005125] rounded-2xl p-1">
               <h2 className="text-xl font-bold mt-8 px-8">Order Summary</h2>
               <Card className="w-full border-none">
                 <ul>
@@ -189,20 +194,24 @@ const Checkout = () => {
         onOk={handleOk}
         onCancel={handleOk}
         footer={[
-          <Button
-            key="home"
-            className="w-full bg-[#005125] text-white rounded-3xl py-2"
-            onClick={handleOk}
-          >
-            Go to Home
-          </Button>,
+          <Link to={"/"}>
+            <Button
+              key="home"
+              className=" bg-[#005125] text-white  mx-auto rounded-3xl py-2"
+              onClick={handleOk}
+            >
+              Go to Home
+            </Button>
+          </Link>,
         ]}
         className="border-t-8 border-t-[#005125] rounded-2xl"
       >
-        <div className="flex flex-col items-center justify-center">
-          <FaCheckCircle size={80} />
-          <p>Thank you for your order! Your payment is complete.</p>
-          <p>
+        <div className="flex flex-col items-center text-center py-20 justify-center">
+          <FaCheckCircle className="text-[#005125]" size={80} />
+          <p className="my-2 font-bold text-[#005125]">
+            Thank you for your order! Your payment is complete.
+          </p>
+          <p className=" text-[#005125]">
             We’ll notify you as soon as your order is on its way. If you have
             any questions or need assistance, feel free to contact our support
             team.

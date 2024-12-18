@@ -1,12 +1,13 @@
 import { Button } from "antd";
 import whatIsImg from "../../assets/whatIsImg.png";
 import buttonLogo from "../../assets/Frame 1000011842.png";
+import { Link } from "react-router";
 
 const WhatIsSection = () => {
   return (
     <div className="relative md:p-16 p-8">
       <div className="absolute inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
-      <div className="md:flex py-20 md:px-16 gap-5 items-center justify-center relative">
+      <div className="md:flex max-w-7xl mx-auto py-20 md:px-16 gap-5 items-center justify-center relative">
         <img
           className="w-[500px] md:h-[320px] mb-5 md:mb-0 shadow-xl"
           src={whatIsImg}
@@ -26,12 +27,14 @@ const WhatIsSection = () => {
             and protecting the nervous system.
           </p>
           <div className="md:my-5 my-2 w-full">
-            <Button className="bg-[#FFC313] w-full md:w-[30%] py-5 md:py-5 border-[#FFC313] font-semibold">
-              Shop Now
-              <span>
-                <img src={buttonLogo} alt="" />
-              </span>
-            </Button>
+            <Link to={"/aboutUs"}>
+              <Button className="bg-[#FFC313] w-full md:w-[30%] py-5 md:py-5 border-[#FFC313] font-semibold">
+                Know About Us
+                <span>
+                  <img src={buttonLogo} alt="" />
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

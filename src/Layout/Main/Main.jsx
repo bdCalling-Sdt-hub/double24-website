@@ -1,14 +1,15 @@
 import { Outlet, ScrollRestoration } from "react-router";
 import Navbar from "../../Components/Shared/Navbar";
 import Footer from "../../Components/Shared/Footer";
+import AgeRestrictions from "../../Components/ui/AgeRestrictions";
 
 const Main = () => {
   return (
     <div>
+      <AgeRestrictions />
       <Navbar />
-      <div className="max-w-7xl mx-auto">
-        <Outlet />
-      </div>
+
+      <Outlet />
       <Footer />
       <ScrollRestoration />
     </div>

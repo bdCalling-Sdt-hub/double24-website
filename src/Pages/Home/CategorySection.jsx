@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import { Link } from "react-router";
 
 const CategorySection = () => {
   const categories = [
@@ -29,7 +30,7 @@ const CategorySection = () => {
   ];
 
   return (
-    <div className="md:p-20 mx-10 md:px-28">
+    <div className="md:p-20 mx-10 md:px-28 max-w-7xl mx-auto">
       <h1 className="md:text-4xl md:text-start text-2xl text-center my-8 font-bold clash">
         Browse <span className="text-[#00863D]">Categories</span>
       </h1>
@@ -52,9 +53,11 @@ const CategorySection = () => {
                 {category.title}
               </h1>
               <p className="my-3 line-clamp-2">{category.description}</p>
-              <Button className="bg-[#00863D] w-full font-semibold text-white text-xl py-5 rounded-xl">
-                SHOP NOW
-              </Button>
+              <Link to={`/shop/category/${category.id}`}>
+                <Button className="bg-[#00863D] w-full font-semibold text-white text-xl py-5 rounded-xl">
+                  SHOP NOW
+                </Button>
+              </Link>
             </div>
           ))}
         </div>

@@ -39,7 +39,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="absolute hidden md:visible top-0 right-20 pt-28 text-white md:flex flex-col gap-10  items-center justify-center">
+      <div className="absolute max-w-7xl mx-auto hidden md:visible top-0 right-20 pt-28 text-white md:flex flex-col gap-10  items-center justify-center">
         <img className="w-32 h-32" src={bannerLogo} alt="" />
         <p className="transform rotate-90 origin-center">Follow Us</p>
         <Divider type="vertical" className="h-16 bg-white" />

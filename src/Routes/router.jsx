@@ -8,6 +8,7 @@ import ContactUs from "../Pages/ContactUs";
 import Product from "../Pages/Shop/Product";
 import Cart from "../Pages/Cart";
 import Checkout from "../Pages/Checkout";
+import FavouritePage from "../Pages/FavouritePage";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       {
         path: "/contactUs",
         element: <ContactUs />,
+      },
+      {
+        path: "/favorite",
+        element: <FavouritePage />,
       },
       {
         path: "/cart",

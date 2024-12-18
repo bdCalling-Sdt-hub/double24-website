@@ -5,7 +5,7 @@ const AboutUsSection = () => {
     <div className="relative p-6 md:p-28">
       <div className="absolute inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
 
-      <div className="md:flex items-center justify-center gap-5 relative">
+      <div className="md:flex max-w-7xl mx-auto items-center justify-center gap-5 relative">
         <img
           className="md:w-[450px] md:h-[300px] shadow-xl"
           src={secImg}

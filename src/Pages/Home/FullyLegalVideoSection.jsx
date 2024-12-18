@@ -3,7 +3,7 @@ import leafImg from "../../assets/leaves1.png";
 
 const FullyLegalVideoSection = () => {
   return (
-    <div className="md:p-36 p-8 text-center">
+    <div className="md:p-36 p-8 text-center max-w-7xl mx-auto">
       <h1 className="md:text-4xl text-2xl clash font-bold">
         TCHA Is <span className="text-[#00863D]">Fully Legal</span>
       </h1>

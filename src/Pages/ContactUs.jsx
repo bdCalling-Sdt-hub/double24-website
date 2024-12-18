@@ -3,6 +3,7 @@ import TitleBg from "../Components/ui/TitleBg";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { Button, Form, Input } from "antd";
+import { Helmet } from "react-helmet-async";
 
 const ContactUs = () => {
   const [form] = Form.useForm();
@@ -13,10 +14,13 @@ const ContactUs = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Us - Doublet24</title>
+      </Helmet>
       <TitleBg title="Contact Us" />
       <div className="relative h-[1650px] md:h-[1100px]">
         <div className="absolute h-full inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
-        <div className="min-h-screen mt-20">
+        <div className="min-h-screen mt-20 max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 md:px-20 my-20 px-10">
             <div className="flex flex-col p-5 rounded-2xl border gap-5 items-center justify-center shadow-xl border-t-8 border-t-[#004620]">
               <div className="bg-gray-100 p-5 rounded-full">
@@ -43,7 +47,7 @@ const ContactUs = () => {
               <p>Thornridge Cir. Shiloh, Hawaii 81063</p>
             </div>
           </div>
-          <div className="md:w-[50%] w-[80%] mx-auto">
+          <div className="md:w-[50%] w-[80%] mx-auto shadow-lg">
             <div className="bg-[#033F1B] pb-10 md:pt-20 pt-5 md:px-16 px-7 rounded-2xl shadow-lg">
               <div className="text-center space-y-3 mb-6">
                 <h2 className="text-2xl text-[#FCD707] font-bold text-center">
