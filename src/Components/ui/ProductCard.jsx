@@ -35,21 +35,22 @@ const ProductCard = ({
           <FaHeart size={20} color={isFavorite ? "red" : "#666666"} />
         </button>
       </div>
-      <p className="bg-[#FFC313] py-1 px-3 text-sm my-3 rounded-3xl w-[45%]">
+      <p className="bg-[#FFC313] px-2 text-sm my-1 rounded-3xl w-[45%]">
         {label}
       </p>
       <h1 className="text-2xl font-semibold">{title}</h1>
-      <p className="my-2 text-start line-clamp-2">{description}</p>
+      <p className="my-1 text-start line-clamp-2">{description}</p>
       <p className="text-2xl font-semibold">{price}</p>
 
       {/* Spacer to push the button to the bottom */}
       <div className="flex-grow"></div>
-
-      <Link to={`/shop/category/${categoryId}/${productId}`}>
-        <Button className="bg-[#00863D] w-full mt-2 py-4 text-white">
-          SHOP NOW
-        </Button>
-      </Link>
+      <div className="w-full">
+        <Link to={`/shop/category/${categoryId}/${productId}`}>
+          <Button className="bg-[#00863D] w-full py-4 mb-1 text-white">
+            SHOP NOW
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Banner = () => {
           <h1 className="md:text-6xl text-2xl clash mb-1 md:my-4">
             for a Healthier Lifestyle
           </h1>
-          <p className="md:text-xl text-sm mx-auto font-fontThree w-[70%] md:w-[65%]">
+          <p className="md:text-xl text-sm mx-auto font-fontThree w-[70%] md:w-[40%]">
             Explore our wide selection of high-quality hemp flowers, CBD
             products, and more. Experience the natural benefits of hemp today!
           </p>

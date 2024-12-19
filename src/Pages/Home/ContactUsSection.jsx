@@ -14,8 +14,8 @@ const ContactUsSection = () => {
 
   return (
     <div className="relative  bg-[#033F1B]">
-      <div className="md:h-[670px] max-w-7xl mx-auto md:flex">
-        <div className="md:w-6/12 md:pt-36 pt-10 md:ps-28 ps-10 md:pe-10">
+      <div className="md:h-[600px] max-w-7xl mx-auto md:flex">
+        <div className="md:w-6/12 md:pt-28 pt-10 md:ps-28 ps-10 md:pe-10">
           <div className="text-white clash md:text-4xl text-2xl">
             <h1>
               For <span className="text-[#FCD707]">Wholesale Inquiries,</span>
@@ -32,17 +32,8 @@ const ContactUsSection = () => {
           <div className="space-y-8 mt-10 ms-10 md:ms:0 w-[65%]">
             <div className="relative">
               <div className="bg-white p-5 ps-12 px-8 rounded-lg">
-                <h3 className="text-[#00863D]">Phone</h3>
-                <p className="font-semibold">+8801234567890</p>
-              </div>
-              <div className="p-4 absolute top-5 -left-6 w-12 bg-yellow-400 rounded-lg">
-                <LuPhone />
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white p-5 ps-12 px-8 rounded-lg">
                 <h3 className="text-[#00863D]">Email</h3>
-                <p className="font-semibold">info@demo.com</p>
+                <p className="font-semibold">cannasseursconsulting@gmail.com</p>
               </div>
               <div className="p-4 absolute top-5 -left-6 w-12 bg-yellow-400 rounded-lg">
                 <MdOutlineEmail />
@@ -52,7 +43,7 @@ const ContactUsSection = () => {
         </div>
 
         <div className="md:w-6/12 pb-10 md:pb-0 flex mt-10 md:mt-0 items-center justify-center md:justify-start">
-          <div className="bg-[#005125] md:pb-0 pb-5 h-full md:pt-20 pt-5 md:px-16 px-7 rounded-lg shadow-lg w-[80%] z-10">
+          <div className="bg-[#005125] md:pb-0 pb-5 h-full md:pt-10 pt-5 md:px-16 px-7 rounded-lg shadow-lg w-[80%] z-10">
             <div className="text-center space-y-3 mb-6">
               <h2 className="text-2xl text-[#FCD707] font-bold text-center">
                 Send Us Message

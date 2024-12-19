@@ -7,7 +7,7 @@ const FullyLegalVideoSection = () => {
       <h1 className="md:text-4xl text-2xl clash font-bold">
         TCHA Is <span className="text-[#00863D]">Fully Legal</span>
       </h1>
-      <p className="my-5">
+      <p className="my-5 text-lg">
         Thanks to the 2018 Farm Bill, THCA is completely legal to purchase and
         use, as long as it contains less than 0.3% Delta-9 THC by dry weight.
         This makes THCA a compliant and accessible product for both consumers

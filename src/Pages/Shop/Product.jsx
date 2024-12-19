@@ -26,10 +26,11 @@ const productData = {
     },
   ],
   price: {
-    halfPound: 750,
-    onePound: 1100,
-    twoPound: 2100,
-    oneAndHalfPound: 1650,
+    oneUnit: 750,
+    twoUnit: 1100,
+    threeUnit: 2100,
+    fourUnit: 3650,
+    fiveUnit: 4950,
   },
   shortDescription:
     "Relax with Bubba Kush THCA Flower, an indica known for its rich coffee and chocolate flavors. Perfect for winding down, it offers deep relaxation with a 22.7% THCA level. Available in half and full pounds, it’s ideal for chill evenings This product contains less than 0.3% Delta-9 THC and complies with the 2018 U.S. Farm Bill, making it legal in most states (except HI, ID, MN, OR, RI, UT, and VT).",
@@ -156,7 +157,7 @@ const Product = () => {
 
   return (
     <>
-      <TitleBg title="" />
+      <TitleBg title="Bubba Kush THCA Flower" />
       <div className="md:p-28 p-8 max-w-7xl mx-auto">
         <div className="md:flex items-center justify-center gap-5">
           <div className="md:w-[45%] flex flex-col items-center">
@@ -223,10 +224,11 @@ const Product = () => {
                 onChange={(e) => setSelectedWeight(e.target.value)}
                 className="border rounded-xl px-4 py-3 w-[40%] bg-gray-200"
               >
-                <option value="halfPound">Half Pound</option>
-                <option value="onePound">One Pound</option>
-                <option value="oneAndHalfPound">One and a Half Pound</option>
-                <option value="twoPound">Two Pound</option>
+                <option value="oneUnit">1 Unit</option>
+                <option value="twoUnit">2 Unit</option>
+                <option value="threeUnit">3 Unit</option>
+                <option value="fourUnit">4 Unit</option>
+                <option value="fiveUnit">5 Unit</option>
               </select>
             </div>
 
@@ -292,7 +294,7 @@ const Product = () => {
         </div>
       </div>
       <div className="mb-10 px-8  max-w-7xl mx-auto">
-        <h1 className="clash md:text-4xl text-2xl border-b-4 border-[#00863D] md:w-[35%] w-[70%]">
+        <h1 className="clash md:text-4xl text-2xl border-b-4 border-[#00863D] md:w-[28%] w-[70%]">
           <span className="text-[#00863D]">Related</span> Products
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3">

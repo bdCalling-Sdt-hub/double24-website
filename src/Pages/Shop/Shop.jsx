@@ -84,12 +84,12 @@ const Shop = () => {
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
         <div className="md:flex  max-w-7xl mx-auto items-center md:py-24 p-8 md:px-32 justify-center gap-5">
-          <img className="w-[500px] md:h-[350px]" src={thcaFImg} alt="" />
+          <img className="w-[400px] md:h-[300px]" src={thcaFImg} alt="" />
           <div>
             <h1 className="md:text-4xl text-2xl mt-5 font-bold mb-3 md:mb-5">
               THCA <span className="text-[#00863D]">Flower</span>
             </h1>
-            <p>
+            <p className="text-lg">
               Explore the finest selection of premium THCA flower strains,
               expertly cultivated for exceptional quality and maximum potency.
               Whether you’re an enthusiast or a business owner, our THCA flower
@@ -105,7 +105,7 @@ const Shop = () => {
         <div className="py-14  max-w-7xl mx-auto">
           {/* category 1 */}
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="md:text-4xl text-2xl border-b-4 md:w-[40%] pb-3 border-[#00863D] font-semibold">
+            <h1 className="md:text-4xl text-2xl border-b-4 md:w-[36%] pb-3 border-[#00863D] font-semibold">
               <span className="text-[#00863D]">Premium</span> THCA Flower
             </h1>
 
@@ -150,7 +150,7 @@ const Shop = () => {
           {/* category 2 */}
 
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
+            <h1 className="text-4xl border-b-4 w-[27%] pb-3 border-[#00863D] font-semibold">
               <span className="text-[#00863D]">Featured</span> Strains
             </h1>
 
@@ -195,7 +195,7 @@ const Shop = () => {
           {/* category 3 */}
 
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="text-4xl border-b-4 w-[40%] pb-3 border-[#00863D] font-semibold">
+            <h1 className="text-4xl border-b-4 w-[32%] pb-3 border-[#00863D] font-semibold">
               THCA <span className="text-[#00863D]">Flower Shake</span>
             </h1>
 

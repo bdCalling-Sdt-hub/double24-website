@@ -83,7 +83,7 @@ const Checkout = () => {
                 name="fullName"
                 rules={[{ required: true }]}
               >
-                <Input className="py-2" placeholder="Full Name" />
+                <Input className="py-2" placeholder="Business Name" />
               </Form.Item>
               <div className="flex w-full gap-5">
                 <Form.Item

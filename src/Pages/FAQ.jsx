@@ -81,7 +81,7 @@ const FAQ = () => {
           expandIconPosition="end"
           bordered={false}
           onChange={handlePanelChange}
-          className="bg-white space-y-3"
+          className="bg-[#eeeeee] space-y-3"
         >
           {faqData.map((item) => (
             <Collapse.Panel

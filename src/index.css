@@ -27,3 +27,11 @@ body {
 .dropdown-link:hover {
   background-color: #eaeaea;
 }
+
+.ant-btn:hover,
+.ant-btn:focus {
+  background-color: #f5de94 !important;
+  border-color: inherit !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}

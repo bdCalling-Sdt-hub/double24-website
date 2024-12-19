@@ -17,7 +17,7 @@ const WhatIsSection = () => {
           <h1 className="md:text-4xl md:text-start text-2xl text-center clash font-bold">
             What is <span className="text-[#00863D]">THCA?</span>
           </h1>
-          <p className="my-5 text-justify">
+          <p className="my-5 text-lg text-justify">
             THCA stands for{" "}
             <span className="font-bold">Tetrahydrocannabinolic Acid</span>. It’s
             a compound found in raw cannabis that turns into THC when heated.
