@@ -33,6 +33,9 @@ const Footer = () => {
           <div>
             <h1 className="font-semibold my-5">Useful Link</h1>
             <ul className="text-gray-300 space-y-3">
+              <li className="font-bold">
+                <Link to={"/auth/login"}>Admin Login</Link>
+              </li>
               <li>
                 <Link>About Us</Link>
               </li>

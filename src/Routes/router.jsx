@@ -9,6 +9,13 @@ import Product from "../Pages/Shop/Product";
 import Cart from "../Pages/Cart";
 import Checkout from "../Pages/Checkout";
 import FavouritePage from "../Pages/FavouritePage";
+import Auth from "../Layout/Auth";
+import Login from "../Pages/Auth/Login";
+import ForgotPassword from "../Pages/Auth/ForgotPassword";
+import VerifyOtp from "../Pages/Auth/VerifyOtp";
+import ResetPassword from "../Pages/Auth/ResetPassword";
+import Dashboard from "../Layout/Dashboard/Dashboard";
+import DashboardHome from "../Pages/Dashboard/DashboardHome";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +57,38 @@ export const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <DashboardHome />,
+      },
+    ],
+  },
+  {
+    path: "/auth",
+    element: <Auth />,
+    children: [
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "forgot-password",
+        element: <ForgotPassword />,
+      },
+      {
+        path: "verify-otp",
+        element: <VerifyOtp />,
+      },
+      {
+        path: "reset-password",
+        element: <ResetPassword />,
       },
     ],
   },
