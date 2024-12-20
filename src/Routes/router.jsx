@@ -16,6 +16,17 @@ import VerifyOtp from "../Pages/Auth/VerifyOtp";
 import ResetPassword from "../Pages/Auth/ResetPassword";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import DashboardHome from "../Pages/Dashboard/DashboardHome";
+import Products from "../Components/ui/Dashboard/ProductManagement/Products";
+import AddProducts from "../Components/ui/Dashboard/ProductManagement/AddProducts";
+import EditProducts from "../Components/ui/Dashboard/ProductManagement/EditProducts";
+import OrderManagement from "../Components/ui/Dashboard/OrderManagement";
+import Category from "../Components/ui/Dashboard/ManageCategory/Category";
+import SubCategory from "../Components/ui/Dashboard/ManageCategory/SubCategory";
+import UserManagement from "../Components/ui/Dashboard/UserManagement";
+import PrivacyPolicy from "../Components/ui/Dashboard/Settings/PrivacyPolicy";
+import TermsAndConditions from "../Components/ui/Dashboard/Settings/TermsAndConditions";
+import ChangePassword from "../Pages/Auth/ChangePassword";
+import PersonalInfo from "../Components/ui/Dashboard/Settings/PersonalInfo";
 
 export const router = createBrowserRouter([
   {
@@ -68,6 +79,50 @@ export const router = createBrowserRouter([
         path: "/dashboard",
         element: <DashboardHome />,
       },
+      {
+        path: "product-management",
+        element: <Products />,
+      },
+      {
+        path: "add-product",
+        element: <AddProducts />,
+      },
+      {
+        path: "edit-product/:id",
+        element: <EditProducts />,
+      },
+      {
+        path: "order-management",
+        element: <OrderManagement />,
+      },
+      {
+        path: "user-management",
+        element: <UserManagement />,
+      },
+      // {
+      //   path: "/edit-order/:id",
+      //   element: <AddProducts />,
+      // },
+      {
+        path: "category",
+        element: <Category />,
+      },
+      {
+        path: "subCategory",
+        element: <SubCategory />,
+      },
+      {
+        path: "personal-info",
+        element: <PersonalInfo />,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "terms-and-conditions",
+        element: <TermsAndConditions />,
+      },
     ],
   },
   {
@@ -81,6 +136,10 @@ export const router = createBrowserRouter([
       {
         path: "forgot-password",
         element: <ForgotPassword />,
+      },
+      {
+        path: "change-password",
+        element: <ChangePassword />,
       },
       {
         path: "verify-otp",

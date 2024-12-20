@@ -39,99 +39,60 @@ const Sidebar = () => {
 
   const menuItems = [
     {
-      key: "/",
+      key: "/dashboard",
       icon: <LuLayoutDashboard size={24} />,
       label: (
-        <Link to="/" className="">
+        <Link to="/dashboard" className="">
           Dashboard
         </Link>
       ),
     },
-    // {
-    //   key: "/transactions",
-    //   icon: <DiGoogleAnalytics size={24} />,
-    //   label: <Link to="/transactions">Transactions</Link>,
-    // },
     {
-      key: "/banners",
-      icon: <MdFeaturedPlayList size={24} />,
-      label: <Link to="/banners">Banners</Link>,
-    },
-    // {
-    //   key: "/category",
-    //   icon: <BiSolidCategoryAlt size={24} />,
-    //   label: <Link to="/category">Category</Link>,
-    // },
-    {
-      key: "/users",
-      icon: <TbUserScreen size={24} />,
-      label: <Link to="/users">Users</Link>,
+      key: "/dashboard/product-management",
+      icon: <LuLayoutDashboard size={24} />,
+      label: (
+        <Link to="/dashboard/product-management" className="">
+          Product Management
+        </Link>
+      ),
     },
     {
-      key: "/vendors",
-      icon: <PiUserPlus size={24} />,
-      label: <Link to="/vendors">Barbers</Link>,
+      key: "/dashboard/add-product",
+      icon: <LuLayoutDashboard size={24} />,
+      label: (
+        <Link to="/dashboard/add-product" className="">
+          Add Product
+        </Link>
+      ),
     },
     {
-      key: "subMenuSalon",
-      icon: <FaScissors size={24} />,
-      label: "Salon",
-      children: [
-        {
-          key: "/services",
-          icon: <MdMiscellaneousServices size={24} />,
-          label: (
-            <Link to="/services" className="text-white hover:text-white">
-              Services
-            </Link>
-          ),
-        },
-        {
-          key: "/salon-category",
-          icon: <BiSolidCategoryAlt size={24} />,
-          label: (
-            <Link to="/salon-category" className="text-white hover:text-white">
-              Category
-            </Link>
-          ),
-        },
-        {
-          key: "/sub-category",
-          icon: <MdCategory size={24} />,
-          label: (
-            <Link to="/sub-category" className="text-white hover:text-white">
-              Sub Category
-            </Link>
-          ),
-        },
-      ],
+      key: "/dashboard/order-management",
+      icon: <LuLayoutDashboard size={24} />,
+      label: (
+        <Link to="/dashboard/order-management" className="">
+          Order Management
+        </Link>
+      ),
     },
     {
-      key: "/orders",
-      icon: <FaBorderStyle size={24} />,
-      label: <Link to="/orders">Orders</Link>,
+      key: "/dashboard/user-management",
+      icon: <LuLayoutDashboard size={24} />,
+      label: (
+        <Link to="/dashboard/user-management" className="">
+          User Management
+        </Link>
+      ),
     },
-    {
-      key: "/cancellation",
-      icon: <MdCancelPresentation size={24} />,
-      label: <Link to="/cancellation">Cancellation</Link>,
-    },
-    {
-      key: "/our-transactions",
-      icon: <FaMoneyBillTransfer size={24} />,
-      label: <Link to="/our-transactions">Transactions</Link>,
-    },
-
     {
       key: "subMenuSetting",
       icon: <IoSettingsOutline size={24} />,
       label: "Settings",
       children: [
         {
-          key: "/personal-information",
+          key: "/dashboard/personal-information",
           label: (
             <Link
-              to="/personal-information"
+              to="/dashboard/personal-info"
               className="text-white hover:text-white"
             >
               Personal Information
@@ -139,44 +100,35 @@ const Sidebar = () => {
           ),
         },
         {
-          key: "/change-password",
+          key: "/auth/change-password",
           label: (
-            <Link to="/change-password" className="text-white hover:text-white">
+            <Link
+              to="/auth/change-password"
+              className="text-white hover:text-white"
+            >
               Change Password
             </Link>
           ),
         },
+
         {
-          key: "/offer-list",
-          label: (
-            <Link to="/offer-list" className="text-white hover:text-white">
-              Offer List
-            </Link>
-          ),
-        },
-        {
-          key: "/about-us",
-          label: (
-            <Link to="/about-us" className="text-white hover:text-white">
-              About Us
-            </Link>
-          ),
-        },
-        {
-          key: "/terms-and-condition",
+          key: "/dashboard/terms-and-conditions",
           label: (
             <Link
-              to="/terms-and-condition"
+              to="/dashboard/terms-and-conditions"
               className="text-white hover:text-white"
             >
-              Terms And Condition
+              Terms And Conditions
             </Link>
           ),
         },
         {
-          key: "/privacy-policy",
+          key: "/dashboard/privacy-policy",
           label: (
-            <Link to="/privacy-policy" className="text-white hover:text-white">
+            <Link
+              to="/dashboard/privacy-policy"
+              className="text-white hover:text-white"
+            >
               Privacy Policy
             </Link>
           ),

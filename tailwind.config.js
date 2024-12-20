@@ -7,6 +7,11 @@ export default {
       fontTwo: ["Poppins", "sans-serif"],
       fontThree: ["Rubik", "sans-serif"],
     },
+    extend: {
+      colors: {
+        primary: "#173616",
+      },
+    },
 
     extend: {},
   },
