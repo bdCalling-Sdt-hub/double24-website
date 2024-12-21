@@ -5,7 +5,7 @@ import AgeRestrictions from "../../Components/ui/AgeRestrictions";
 
 const Main = () => {
   return (
-    <div>
+    <div className="font-fontTwo">
       <AgeRestrictions />
       <Navbar />
 

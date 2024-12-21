@@ -105,7 +105,7 @@ const ContactUsSection = () => {
                 <Button
                   type="primary"
                   htmlType="submit"
-                  className="w-full bg-[#FCD707] font-semibold text-black"
+                  className="w-full bg-[#FCD707] font-bold text-lg py-5 text-black"
                 >
                   Submit Your Message
                 </Button>

@@ -180,7 +180,7 @@ const Cart = () => {
             </div>
 
             <Link to={"/checkout"}>
-              <button className="w-full mt-4 bg-[#173616] text-white py-2 rounded-2xl hover:bg-[#145014]">
+              <button className="w-full mt-4 bg-[#173616] text-white py-3 rounded-2xl hover:bg-[#145014]">
                 Proceed to Checkout
               </button>
             </Link>

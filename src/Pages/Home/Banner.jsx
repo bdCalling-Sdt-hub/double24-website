@@ -3,6 +3,7 @@ import bannerBg from "../../assets/Background.png";
 import buttonLogo from "../../assets/Frame 1000011842.png";
 import bannerLogo from "../../assets/Group 24899.png";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Banner = () => {
   return (
@@ -30,12 +31,14 @@ const Banner = () => {
             products, and more. Experience the natural benefits of hemp today!
           </p>
           <div className="md:my-5 my-2">
-            <Button className="bg-[#FFC313] md:py-5 border-[#FFC313] font-semibold">
-              Shop Now
-              <span>
-                <img src={buttonLogo} alt="" />
-              </span>
-            </Button>
+            <Link to={"/shop/category/1"}>
+              <Button className="bg-[#FFC313] text-lg md:py-6 border-[#FFC313] font-semibold">
+                Shop Now
+                <span>
+                  <img src={buttonLogo} alt="" />
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

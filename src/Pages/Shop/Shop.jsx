@@ -102,10 +102,10 @@ const Shop = () => {
       </div>
 
       <div className="bg-white ">
-        <div className="py-14  max-w-7xl mx-auto">
+        <div className="py-14  max-w-[1600px] mx-auto">
           {/* category 1 */}
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="md:text-4xl text-2xl border-b-4 md:w-[36%] pb-3 border-[#00863D] font-semibold">
+            <h1 className="md:text-4xl clash text-2xl border-b-4 md:w-[32%] pb-3 border-[#00863D] font-semibold">
               <span className="text-[#00863D]">Premium</span> THCA Flower
             </h1>
 
@@ -125,7 +125,7 @@ const Shop = () => {
                 },
                 1024: {
                   slidesPerView: 4,
-                  spaceBetween: 200,
+                  spaceBetween: 10,
                 },
               }}
               navigation={true}
@@ -150,7 +150,7 @@ const Shop = () => {
           {/* category 2 */}
 
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="md:text-4xl text-2xl border-b-4 md:w-[35%] w-[75%] pb-3 border-[#00863D] font-semibold">
+            <h1 className="md:text-4xl clash text-2xl border-b-4 md:w-[28%] w-[75%] pb-3 border-[#00863D] font-semibold">
               TCHA <span className="text-[#00863D]">Flower Smalls</span>
             </h1>
 
@@ -170,7 +170,7 @@ const Shop = () => {
                 },
                 1024: {
                   slidesPerView: 4,
-                  spaceBetween: 200,
+                  spaceBetween: 10,
                 },
               }}
               navigation={true}
@@ -195,7 +195,7 @@ const Shop = () => {
           {/* category 3 */}
 
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="md:text-4xl text-2xl border-b-4 md:w-[35%] w-[75%] pb-3 border-[#00863D] font-semibold">
+            <h1 className="md:text-4xl text-2xl clash border-b-4 md:w-[30%] w-[75%] pb-3 border-[#00863D] font-semibold">
               Pre <span className="text-[#00863D]">Packaged Flower</span>
             </h1>
 
@@ -215,7 +215,7 @@ const Shop = () => {
                 },
                 1024: {
                   slidesPerView: 4,
-                  spaceBetween: 200,
+                  spaceBetween: 10,
                 },
               }}
               navigation={true}

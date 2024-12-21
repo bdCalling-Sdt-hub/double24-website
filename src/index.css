@@ -30,9 +30,9 @@ body {
 
 .ant-btn:hover,
 .ant-btn:focus {
-  background-color: #f5de94 !important;
-  border-color: inherit !important;
-  color: inherit !important;
+  background-color: #13462c !important;
+  border-color: white !important;
+  color: white !important;
   box-shadow: none !important;
 }
 

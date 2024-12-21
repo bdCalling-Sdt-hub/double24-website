@@ -6,7 +6,7 @@ import productImg3 from "../../assets/Frame 1707481910.png";
 import productImg4 from "../../assets/Frame 1707481911.png";
 import { useState } from "react";
 import { FiCheckSquare } from "react-icons/fi";
-import { Tabs } from "antd";
+import { ConfigProvider, Tabs } from "antd";
 import ProductCard from "../../Components/ui/ProductCard";
 import { Link } from "react-router";
 import toast from "react-hot-toast";
@@ -140,7 +140,7 @@ const Product = () => {
   const items = [
     {
       key: "1",
-      label: <p className="md:text-xl">Description</p>,
+      label: <p className="md:text-xl ">Description</p>,
       children: description,
     },
     {
@@ -158,7 +158,7 @@ const Product = () => {
   return (
     <>
       <TitleBg title="Bubba Kush THCA Flower" />
-      <div className="md:p-28 p-8 max-w-7xl mx-auto">
+      <div className="md:p-28 p-8 max-w-7xl mx-auto font-fontTwo">
         <div className="md:flex items-center justify-center gap-5">
           <div className="md:w-[45%] flex flex-col items-center">
             {/* Main Image */}
@@ -215,7 +215,7 @@ const Product = () => {
               <p>${productData?.price.oneUnit}</p> -
               <p>${productData?.price.fiveUnit}</p>
             </div>
-            <p>{productData?.shortDescription}</p>
+            <p className="leading-5">{productData?.shortDescription}</p>
             <div className="flex items-center gap-10 mt-10 md:mt-0">
               <h1 className="font-bold text-2xl">Weight</h1>
               {/* Dropdown for weight selection */}
@@ -290,10 +290,18 @@ const Product = () => {
           </div>
         </div>
         <div className="mt-10">
-          <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+          <ConfigProvider
+            theme={{
+              token: {
+                colorPrimary: "#173616", // Set your active tab underline color
+              },
+            }}
+          >
+            <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+          </ConfigProvider>
         </div>
       </div>
-      <div className="mb-10 px-8  max-w-7xl mx-auto">
+      <div className="mb-10 px-8  max-w-7xl mx-auto font-fontTwo">
         <h1 className="clash md:text-4xl text-2xl border-b-4 border-[#00863D] md:w-[28%] w-[70%]">
           <span className="text-[#00863D]">Related</span> Products
         </h1>

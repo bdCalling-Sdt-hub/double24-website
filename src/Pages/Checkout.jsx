@@ -79,7 +79,7 @@ const Checkout = () => {
             <div className="md:w-[70%] md:p-10">
               <h2 className="text-lg mb-4">Billing Information</h2>
               <Form.Item
-                label="Full Name"
+                label="Business Name"
                 name="fullName"
                 rules={[{ required: true }]}
               >

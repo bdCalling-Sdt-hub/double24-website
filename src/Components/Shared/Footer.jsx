@@ -37,13 +37,13 @@ const Footer = () => {
                 <Link to={"/auth/login"}>Admin Login</Link>
               </li>
               <li>
-                <Link>About Us</Link>
+                <Link to={"/aboutUs"}>About Us</Link>
               </li>
               <li>
-                <Link>Contact Us</Link>
+                <Link to={"/contactUs"}>Contact Us</Link>
               </li>
               <li>
-                <Link>Faqs</Link>
+                <Link to={"/f-a-q"}>Faqs</Link>
               </li>
             </ul>
           </div>
@@ -67,12 +67,12 @@ const Footer = () => {
             <div className="flex items-center rounded-lg overflow-hidden border border-gray-500 bg-[#002A12]">
               <Input
                 placeholder="Email"
-                className="border-none focus:outline-none text-white placeholder:text-gray-400 bg-transparent"
+                className="border-none focus:outline-none py-2 text-white placeholder:text-gray-400 bg-transparent"
                 style={{ boxShadow: "none", border: "none" }}
               />
               <Button
                 type="primary"
-                className="bg-[#5BBE6A] text-white font-semibold hover:bg-[#4CA95B] h-full"
+                className="bg-[#5BBE6A] text-white font-semibold hover:bg-[#4CA95B] h-7 me-1"
                 style={{
                   borderTopLeftRadius: 0,
                   borderBottomLeftRadius: 0,

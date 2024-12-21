@@ -27,9 +27,9 @@ const WhatIsSection = () => {
             and protecting the nervous system.
           </p>
           <div className="md:my-5 my-2 w-full">
-            <Link to={"/aboutUs"}>
-              <Button className="bg-[#FFC313] w-full md:w-[30%] py-5 md:py-5 border-[#FFC313] font-semibold">
-                Know About Us
+            <Link to={"/shop/category/1"}>
+              <Button className="bg-[#FFC313] w-full md:w-[35%] text-lg py-5 md:py-5 border-[#FFC313] font-bold">
+                Shop Now
                 <span>
                   <img src={buttonLogo} alt="" />
                 </span>

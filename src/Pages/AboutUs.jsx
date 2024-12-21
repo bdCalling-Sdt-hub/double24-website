@@ -11,11 +11,11 @@ const AboutUs = () => {
         <title>About Us - Doublet24</title>
       </Helmet>
       <TitleBg title="About Us" />
-      <div>
-        <div className="md:px-20 px-7">
+      <div className=" font-fontTwo">
+        <div className="md:px-20 px-7 ">
           <div className="md:flex items-center max-w-7xl mx-auto justify-center gap-10 py-20">
             <div className="text-justify md:text-start">
-              <h1 className="text-4xl font-bold">
+              <h1 className="text-4xl font-bold clash">
                 <span className="text-[#00863D] font-semibold">About</span> Us
               </h1>
               <p className="my-5 text-lg">
@@ -51,7 +51,7 @@ const AboutUs = () => {
                 alt=""
               />
               <div className="text-justify md:text-left">
-                <h1 className="text-4xl font-bold">
+                <h1 className="text-4xl clash font-bold">
                   What{" "}
                   <span className="text-[#00863D] font-semibold">
                     We Offer?
@@ -81,7 +81,7 @@ const AboutUs = () => {
         <div className="md:px-20 px-7">
           <div className="md:flex max-w-7xl mx-auto items-center justify-center gap-10 py-20">
             <div>
-              <h1 className="text-4xl font-bold">
+              <h1 className="text-4xl clash font-bold">
                 Why You{" "}
                 <span className="text-[#00863D] font-semibold">Choose Us?</span>
               </h1>

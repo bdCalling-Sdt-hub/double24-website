@@ -30,8 +30,8 @@ const AboutUsSection = () => {
           </p>
           <div className="md:my-5 my-2 w-full">
             <Link to={"/aboutUs"}>
-              <Button className="bg-[#FFC313] w-full md:w-[30%] py-5 md:py-5 border-[#FFC313] font-semibold">
-                Know About Us
+              <Button className="bg-[#FFC313] w-full font-bold text-lg md:w-[35%] py-5 md:py-5 border-[#FFC313]">
+                Learn More
                 <span>
                   <img src={buttonLogo} alt="" />
                 </span>
