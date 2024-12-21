@@ -18,10 +18,10 @@ const ContactUs = () => {
         <title>Contact Us - Doublet24</title>
       </Helmet>
       <TitleBg title="Contact Us" />
-      <div className="relative h-[1650px] md:h-[1100px]">
+      <div className="relative h-[1100px]">
         <div className="absolute h-full inset-0 bg-gradient-to-t from-[#eaf7ea] -z-10"></div>
         <div className="min-h-screen mt-20 max-w-7xl mx-auto">
-          <div className="flex flex-col w-[50%] mx-auto mb-10 p-5 rounded-2xl border gap-5 items-center justify-center shadow-xl border-t-8 border-t-[#004620]">
+          <div className="flex flex-col mx-5 md:w-[50%] md:mx-auto mb-10 p-5 rounded-2xl border gap-5 items-center justify-center shadow-xl border-t-8 border-t-[#004620]">
             <div className="bg-gray-100 p-5 rounded-full">
               <MdEmail className="text-[#0caf55]" size={40} />
             </div>

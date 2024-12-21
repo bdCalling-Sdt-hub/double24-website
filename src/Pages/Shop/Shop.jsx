@@ -150,8 +150,8 @@ const Shop = () => {
           {/* category 2 */}
 
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="text-4xl border-b-4 w-[27%] pb-3 border-[#00863D] font-semibold">
-              <span className="text-[#00863D]">Featured</span> Strains
+            <h1 className="md:text-4xl text-2xl border-b-4 md:w-[35%] w-[75%] pb-3 border-[#00863D] font-semibold">
+              TCHA <span className="text-[#00863D]">Flower Smalls</span>
             </h1>
 
             <Swiper
@@ -162,7 +162,7 @@ const Shop = () => {
               breakpoints={{
                 640: {
                   slidesPerView: 2,
-                  spaceBetween: 20,
+                  spaceBetween: 10,
                 },
                 768: {
                   slidesPerView: 3,
@@ -195,8 +195,8 @@ const Shop = () => {
           {/* category 3 */}
 
           <div className="md:px-20 px-8 bg-white">
-            <h1 className="text-4xl border-b-4 w-[32%] pb-3 border-[#00863D] font-semibold">
-              THCA <span className="text-[#00863D]">Flower Shake</span>
+            <h1 className="md:text-4xl text-2xl border-b-4 md:w-[35%] w-[75%] pb-3 border-[#00863D] font-semibold">
+              Pre <span className="text-[#00863D]">Packaged Flower</span>
             </h1>
 
             <Swiper

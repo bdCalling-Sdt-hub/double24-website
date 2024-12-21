@@ -28,6 +28,7 @@ import TermsAndConditions from "../Components/ui/Dashboard/Settings/TermsAndCond
 import ChangePassword from "../Pages/Auth/ChangePassword";
 import PersonalInfo from "../Components/ui/Dashboard/Settings/PersonalInfo";
 import Notifications from "../Pages/Dashboard/Notifications";
+import FaqManagement from "../Components/ui/Dashboard/FaqManagement";
 
 export const router = createBrowserRouter([
   {
@@ -131,6 +132,10 @@ export const router = createBrowserRouter([
       {
         path: "terms-and-conditions",
         element: <TermsAndConditions />,
+      },
+      {
+        path: "faq-management",
+        element: <FaqManagement />,
       },
     ],
   },

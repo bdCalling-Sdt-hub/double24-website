@@ -7,7 +7,7 @@ const CategorySection = () => {
       id: 1,
       imgSrc: "https://i.ibb.co.com/wgMzVNv/Frame-1707481877.png",
       label: "WHOLESALE",
-      title: "Title sdfvgkj soid",
+      title: "THCA Flower ",
       description:
         "Explore premium, high-quality THCA strains with unmatched potency and value.",
     },
@@ -15,7 +15,7 @@ const CategorySection = () => {
       id: 2,
       imgSrc: "https://i.ibb.co.com/8dJd8Dx/Frame-1707481877-1.png",
       label: "WHOLESALE",
-      title: "Another Title",
+      title: "THCA Small Buds",
       description:
         "Discover exclusive retail products with the finest quality and value.",
     },
@@ -23,7 +23,7 @@ const CategorySection = () => {
       id: 3,
       imgSrc: "https://i.ibb.co.com/DLKPNvD/Frame-1707481877-2.png",
       label: "WHOLESALE",
-      title: "Third Title Example",
+      title: "Packaged Eighths",
       description:
         "Find high-quality strains and products with unbeatable pricing.",
     },

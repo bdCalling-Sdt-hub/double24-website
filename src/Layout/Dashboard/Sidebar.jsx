@@ -92,10 +92,10 @@ const Sidebar = () => {
           key: "/dashboard/privacy-policy",
           label: <Link to="/dashboard/privacy-policy">Privacy Policy</Link>,
         },
-        // {
-        //   key: "/f-a-q",
-        //   label: <Link to="/f-a-q">FAQ</Link>,
-        // },
+        {
+          key: "/dashboard/faq-management",
+          label: <Link to="/dashboard/faq-management">FAQ</Link>,
+        },
       ],
     },
     {

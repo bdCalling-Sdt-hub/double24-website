@@ -104,7 +104,10 @@ const Navbar = () => {
             if (!option.path) {
               // Render the "Shop" dropdown without a NavLink
               return (
-                <div key={index} className="nav-link flex flex-col px-3 py-1">
+                <div
+                  key={index}
+                  className="nav-link flex items-center justify-center flex-col px-3 py-1"
+                >
                   {option.label}
                 </div>
               );
@@ -115,7 +118,7 @@ const Navbar = () => {
                 key={index}
                 to={option.path}
                 className={({ isActive }) =>
-                  `nav-link flex flex-col items-center justify-center px-3 py-1 rounded-lg ${
+                  `nav-link flex flex-col items-center justify-center px-3 py-4 rounded-lg ${
                     isActive ? "bg-[#FFC313]" : "hover:bg-gray-200"
                   }`
                 }

@@ -92,7 +92,7 @@ const relatedProductData = [
 
 const Product = () => {
   const [mainImage, setMainImage] = useState(productImg1); // Initial main image
-  const [selectedWeight, setSelectedWeight] = useState("halfPound"); // Default weight
+  const [selectedWeight, setSelectedWeight] = useState("oneUnit"); // Default weight
   const [quantity, setQuantity] = useState(1);
 
   // Function to calculate total price
@@ -212,8 +212,8 @@ const Product = () => {
               <p>{productData?.reviews.length} Reviews</p>
             </div>
             <div className="flex gap-3 text-3xl font-bold text-[#00863D]">
-              <p>${productData?.price.halfPound}</p> -
-              <p>${productData?.price.twoPound}</p>
+              <p>${productData?.price.oneUnit}</p> -
+              <p>${productData?.price.fiveUnit}</p>
             </div>
             <p>{productData?.shortDescription}</p>
             <div className="flex items-center gap-10 mt-10 md:mt-0">
