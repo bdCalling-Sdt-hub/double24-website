@@ -71,7 +71,7 @@ const RunningOrdersTable = () => {
     <div className="border bg-white h-[300px] p-5 rounded-2xl">
       <div className="flex items-center justify-between">
         <h1 className="font-bold mb-2">Running Orders</h1>
-        <Link to={"/analytics"}>
+        <Link to={"/dashboard/order-management"}>
           <Button className="bg-secondary border-secondary">View All</Button>
         </Link>
       </div>

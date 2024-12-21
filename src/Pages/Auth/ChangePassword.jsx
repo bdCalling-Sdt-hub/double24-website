@@ -56,12 +56,12 @@ const ChangePassword = () => {
   };
 
   return (
-    <div className="bg-white p-5 rounded-2xl h-[700px]">
+    <div className="bg-white p-5 rounded-2xl w-[50%] mx-auto h-[500px]">
       <Form
         layout="vertical"
         form={form} // Connect the form instance
         onFinish={onFinish}
-        className="w-[50%] mx-auto mt-20"
+        className="w-full mx-auto"
       >
         <Form.Item
           name="currentPassword"
@@ -140,7 +140,7 @@ const ChangePassword = () => {
               background: "#173616",
               color: "white",
             }}
-            className="roboto-medium text-sm leading-4"
+            className="roboto-medium text-sm w-full leading-4"
           >
             Submit
           </Button>

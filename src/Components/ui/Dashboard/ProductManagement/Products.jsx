@@ -160,7 +160,7 @@ const Products = () => {
       key: "actions",
       render: (_, record) => (
         <div className="flex items-center gap-1">
-          <Link to={`/edit-product/${record.id}`}>
+          <Link to={`/dashboard/edit-product/${record.id}`}>
             <FaRegEdit className="" size={20} />
           </Link>
           <Link>
@@ -173,30 +173,28 @@ const Products = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4 text-start">Herb Products</h1>
+      <h1 className="text-2xl font-bold mb-4 text-start">Products</h1>
 
-      {/* Search Input */}
       <div className="flex justify-between gap-10">
         <Input
           placeholder="Search products..."
           value={searchText}
           onChange={handleSearch}
-          className="mb-4 w-[70%]"
+          className="mb-4 py-3 w-[50%]"
         />
         <Link to={"/dashboard/add-product"}>
-          <button className="flex items-center rounded-2xl justify-center bg-[#173616] text-white p-2 ">
+          <button className="flex items-center gap-1 rounded-lg justify-center bg-[#173616] text-white p-4 ">
             {" "}
             <IoMdAdd /> Add Product
           </button>
         </Link>
       </div>
 
-      {/* Products Table */}
       <Table
         dataSource={filteredData}
         columns={columns}
         rowKey="id"
-        bordered={false} // Removes the table border
+        bordered={false}
         className="shadow-md table-no-border"
         pagination={{ pageSize: 5 }}
       />

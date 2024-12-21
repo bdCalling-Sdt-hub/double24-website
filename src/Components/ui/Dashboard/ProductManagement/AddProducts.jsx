@@ -49,10 +49,14 @@ const AddProduct = () => {
                 fileList={fileList}
                 onChange={handleUploadChange}
                 beforeUpload={() => false} // Prevent auto-upload
-                className="upload-list-inline"
+                style={{
+                  minHeight: "150px",
+                  padding: "20px",
+                  border: "2px dashed #d9d9d9",
+                }}
               >
                 <p className="ant-upload-drag-icon">
-                  <InboxOutlined />
+                  <InboxOutlined size={40} />
                 </p>
                 <div className="ant-upload-text">
                   {fileList ? (
@@ -84,7 +88,7 @@ const AddProduct = () => {
                   { required: true, message: "Please select a quantity!" },
                 ]}
               >
-                <Select>
+                <Select style={{ height: "55px" }}>
                   <Option value="1 unit">1 unit</Option>
                   <Option value="2 units">2 units</Option>
                   <Option value="3 units">3 units</Option>
@@ -97,7 +101,7 @@ const AddProduct = () => {
                 name="brand"
                 className="w-full"
               >
-                <Input placeholder="Enter brand name" />
+                <Input className="py-3" placeholder="Enter brand name" />
               </Form.Item>
             </div>
 
@@ -112,7 +116,11 @@ const AddProduct = () => {
                 },
               ]}
             >
-              <TextArea rows={4} placeholder="Enter product description" />
+              <TextArea
+                className=""
+                rows={6}
+                placeholder="Enter product description"
+              />
             </Form.Item>
           </div>
 
@@ -125,8 +133,9 @@ const AddProduct = () => {
               rules={[
                 { required: true, message: "Please enter the product name!" },
               ]}
+              className="text-2xl"
             >
-              <Input placeholder="Enter product name" />
+              <Input className="py-3" placeholder="Enter product name" />
             </Form.Item>
 
             {/* Regular Price */}
@@ -138,7 +147,7 @@ const AddProduct = () => {
               ]}
             >
               <InputNumber
-                className="w-full"
+                className="w-full py-3"
                 placeholder="Enter regular price"
                 prefix="$"
                 min={0}
@@ -148,7 +157,7 @@ const AddProduct = () => {
             {/* Discount */}
             <Form.Item label="Discount (Optional)" name="discount">
               <InputNumber
-                className="w-full"
+                className="w-full py-3"
                 placeholder="Enter discount amount"
                 prefix="$"
                 min={0}
@@ -161,7 +170,7 @@ const AddProduct = () => {
               name="category"
               rules={[{ required: true, message: "Please select a category!" }]}
             >
-              <Select placeholder="Select category">
+              <Select style={{ height: "55px" }} placeholder="Select category">
                 {categories.map((cat) => (
                   <Option key={cat} value={cat}>
                     {cat}
@@ -178,7 +187,10 @@ const AddProduct = () => {
                 { required: true, message: "Please select a sub-category!" },
               ]}
             >
-              <Select placeholder="Select sub-category">
+              <Select
+                style={{ height: "55px" }}
+                placeholder="Select sub-category"
+              >
                 {subCategories.map((sub) => (
                   <Option key={sub} value={sub}>
                     {sub}
@@ -193,7 +205,7 @@ const AddProduct = () => {
         <Form.Item>
           <Button
             htmlType="submit"
-            className="w-full bg-[#173616] text-white py-5 mt-6"
+            className="w-full bg-[#173616] text-white py-7 text-xl mt-6"
           >
             Add Product
           </Button>

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Input, Table, Tag, Button, Modal, Form, Select } from "antd";
+import { FaEdit } from "react-icons/fa";
 
-const { Search } = Input;
 const { Option } = Select;
 
 const UserManagement = () => {
-  const [searchText, setSearchText] = useState("");
   const [data, setData] = useState([
     {
       key: "1",
@@ -13,6 +12,8 @@ const UserManagement = () => {
       email: "john.doe@example.com",
       role: "Admin",
       status: "Active",
+      address: "123 Main St, Cityville",
+      engagement: 15,
     },
     {
       key: "2",
@@ -20,6 +21,8 @@ const UserManagement = () => {
       email: "jane.smith@example.com",
       role: "User",
       status: "Inactive",
+      address: "456 Oak St, Townsville",
+      engagement: 5,
     },
     {
       key: "3",
@@ -27,6 +30,8 @@ const UserManagement = () => {
       email: "mike.brown@example.com",
       role: "User",
       status: "Active",
+      address: "789 Pine St, Villageville",
+      engagement: 20,
     },
     {
       key: "4",
@@ -34,6 +39,8 @@ const UserManagement = () => {
       email: "susan.white@example.com",
       role: "Admin",
       status: "Pending",
+      address: "101 Maple St, Suburbia",
+      engagement: 2,
     },
     {
       key: "5",
@@ -41,8 +48,39 @@ const UserManagement = () => {
       email: "david.jones@example.com",
       role: "User",
       status: "Inactive",
+      address: "202 Birch St, Metropolis",
+      engagement: 10,
     },
   ]);
+
+  const [statusFilter, setStatusFilter] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const [filteredData, setFilteredData] = useState(data);
+
+  // Handle search
+  const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearchText(value);
+
+    const filtered = data.filter((item) =>
+      Object.values(item).some((field) =>
+        field.toString().toLowerCase().includes(value)
+      )
+    );
+
+    setFilteredData(filtered);
+  };
+
+  // Handle status filter change
+  const handleStatusChange = (value) => {
+    setStatusFilter(value);
+
+    const filtered = data.filter((item) => {
+      return value ? item.status.toLowerCase() === value.toLowerCase() : true;
+    });
+
+    setFilteredData(filtered);
+  };
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
@@ -53,23 +91,12 @@ const UserManagement = () => {
   };
 
   const handleOk = () => {
-    // Here we could handle the updates for the user
     setIsModalVisible(false);
   };
 
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-
-  const handleSearch = (value) => {
-    setSearchText(value.trim());
-  };
-
-  const filteredData = data.filter((item) =>
-    Object.values(item).some((field) =>
-      String(field).toLowerCase().includes(searchText.toLowerCase())
-    )
-  );
 
   const columns = [
     {
@@ -109,6 +136,17 @@ const UserManagement = () => {
       ),
     },
     {
+      title: "Address",
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: "Engagement",
+      dataIndex: "engagement",
+      key: "engagement",
+      render: (engagement) => <span>{engagement} purchases</span>,
+    },
+    {
       title: "Actions",
       key: "actions",
       render: (_, record) => (
@@ -117,7 +155,7 @@ const UserManagement = () => {
           onClick={() => showModal(record)}
           className="text-blue-600"
         >
-          Edit
+          <FaEdit size={24} />
         </Button>
       ),
     },
@@ -126,13 +164,25 @@ const UserManagement = () => {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold mb-6 text-start">User Management</h1>
-      <Search
-        placeholder="Search users"
-        onSearch={handleSearch}
-        enterButton
-        allowClear
-        className="mb-4"
-      />
+      <div className="flex mb-5 items-center">
+        <Input
+          placeholder="Search"
+          value={searchText}
+          onChange={handleSearch}
+          className=" mr-4 py-3 w-[50%]"
+        />
+        <Select
+          placeholder="Filter by Status"
+          value={statusFilter}
+          onChange={handleStatusChange}
+          style={{ width: 150, height: 50 }}
+        >
+          <Option value="">All</Option>
+          <Option value="Active">Active</Option>
+          <Option value="Inactive">Inactive</Option>
+          <Option value="Pending">Pending</Option>
+        </Select>
+      </div>
       <Table
         columns={columns}
         dataSource={filteredData}

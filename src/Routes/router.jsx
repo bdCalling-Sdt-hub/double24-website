@@ -27,6 +27,7 @@ import PrivacyPolicy from "../Components/ui/Dashboard/Settings/PrivacyPolicy";
 import TermsAndConditions from "../Components/ui/Dashboard/Settings/TermsAndConditions";
 import ChangePassword from "../Pages/Auth/ChangePassword";
 import PersonalInfo from "../Components/ui/Dashboard/Settings/PersonalInfo";
+import Notifications from "../Pages/Dashboard/Notifications";
 
 export const router = createBrowserRouter([
   {
@@ -108,12 +109,20 @@ export const router = createBrowserRouter([
         element: <Category />,
       },
       {
+        path: "notifications",
+        element: <Notifications />,
+      },
+      {
         path: "subCategory",
         element: <SubCategory />,
       },
       {
         path: "personal-info",
         element: <PersonalInfo />,
+      },
+      {
+        path: "change-password",
+        element: <ChangePassword />,
       },
       {
         path: "privacy-policy",
@@ -137,10 +146,7 @@ export const router = createBrowserRouter([
         path: "forgot-password",
         element: <ForgotPassword />,
       },
-      {
-        path: "change-password",
-        element: <ChangePassword />,
-      },
+
       {
         path: "verify-otp",
         element: <VerifyOtp />,

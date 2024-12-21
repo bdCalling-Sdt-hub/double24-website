@@ -5,7 +5,6 @@ const { Search } = Input;
 const { Option } = Select;
 
 const OrderManagement = () => {
-  const [searchText, setSearchText] = useState("");
   const [data, setData] = useState([
     {
       orderNo: "001",
@@ -69,22 +68,36 @@ const OrderManagement = () => {
     },
   ]);
 
-  const handleSearch = (value) => {
-    setSearchText(value.trim());
+  const [searchText, setSearchText] = useState("");
+  const [selectedStatus, setSelectedStatus] = useState("All");
+  const [filteredData, setFilteredData] = useState(data);
+
+  // Handle search
+  const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearchText(value);
+    filterData(value, selectedStatus);
   };
 
-  const handleStatusChange = (value, record) => {
-    const updatedData = data.map((item) =>
-      item.orderNo === record.orderNo ? { ...item, status: value } : item
-    );
-    setData(updatedData);
+  // Handle status change
+  const handleStatusChange = (value) => {
+    setSelectedStatus(value);
+    filterData(searchText, value);
   };
 
-  const filteredData = data.filter((item) =>
-    Object.values(item).some((field) =>
-      String(field).toLowerCase().includes(searchText.toLowerCase())
-    )
-  );
+  // Filter data based on search text and status
+  const filterData = (searchText, status) => {
+    const filtered = data.filter((item) => {
+      const matchesSearch = Object.values(item).some((field) =>
+        field.toString().toLowerCase().includes(searchText)
+      );
+      const matchesStatus = status === "All" || item.status === status;
+
+      return matchesSearch && matchesStatus;
+    });
+
+    setFilteredData(filtered);
+  };
 
   const columns = [
     {
@@ -149,13 +162,24 @@ const OrderManagement = () => {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold mb-6 text-start">Order Management</h1>
-      <Search
-        placeholder="Search orders"
-        onSearch={handleSearch}
-        enterButton
-        allowClear
-        className="mb-4"
-      />
+      <div className="mb-4 flex items-center">
+        <Input
+          placeholder="Search products..."
+          value={searchText}
+          onChange={handleSearch}
+          className="py-3 w-[50%] mr-4"
+        />
+        <Select
+          value={selectedStatus}
+          onChange={handleStatusChange}
+          style={{ width: 150, height: 50 }}
+        >
+          <Option value="All">All</Option>
+          <Option value="Shipped">Shipped</Option>
+          <Option value="Pending">Pending</Option>
+          <Option value="Shipping">Shipping</Option>
+        </Select>
+      </div>
       <Table
         columns={columns}
         dataSource={filteredData}
