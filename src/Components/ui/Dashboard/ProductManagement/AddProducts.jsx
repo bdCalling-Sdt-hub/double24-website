@@ -78,7 +78,6 @@ const AddProduct = () => {
               </Upload.Dragger>
             </Form.Item>
 
-            {/* Quantity Dropdown */}
             <div className="flex gap-5 items-center justify-center">
               <Form.Item
                 label="Quantity"
@@ -88,11 +87,7 @@ const AddProduct = () => {
                   { required: true, message: "Please select a quantity!" },
                 ]}
               >
-                <Select style={{ height: "55px" }}>
-                  <Option value="1 unit">1 unit</Option>
-                  <Option value="2 units">2 units</Option>
-                  <Option value="3 units">3 units</Option>
-                </Select>
+                <Input className="py-3" placeholder="Enter quantity" />
               </Form.Item>
 
               {/* Brand Input */}

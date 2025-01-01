@@ -1,25 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Menu } from "antd";
-import {
-  MdAdd,
-  MdCancelPresentation,
-  MdCategory,
-  MdChangeCircle,
-  MdFeaturedPlayList,
-  MdMiscellaneousServices,
-  MdOutlineAdminPanelSettings,
-  MdOutlineProductionQuantityLimits,
-} from "react-icons/md";
+import { MdAdd, MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { TbUserScreen } from "react-icons/tb";
 import { IoIosLogOut } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
-import { PiUserPlus } from "react-icons/pi";
 import { LuLayoutDashboard } from "react-icons/lu";
 import Cookies from "js-cookie";
 import logo from "../../assets/logoGreenBg.png";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -69,15 +59,13 @@ const Sidebar = () => {
       label: "Settings",
       children: [
         {
-          key: "/dashboard/personal-information",
-
+          key: "/dashboard/personal-info",
           label: (
             <Link to="/dashboard/personal-info">Personal Information</Link>
           ),
         },
         {
           key: "/dashboard/change-password",
-
           label: <Link to="/dashboard/change-password">Change Password</Link>,
         },
         {
@@ -94,7 +82,11 @@ const Sidebar = () => {
         },
         {
           key: "/dashboard/faq-management",
-          label: <Link to="/dashboard/faq-management">FAQ</Link>,
+          label: <Link to="/dashboard/faq-management">Update FAQ</Link>,
+        },
+        {
+          key: "/dashboard/update-about-us",
+          label: <Link to="/dashboard/update-about-us">Update About Us</Link>,
         },
       ],
     },
@@ -152,31 +144,6 @@ const Sidebar = () => {
         }}
         items={menuItems}
       />
-      <style jsx>{`
-        .ant-menu-item-selected {
-          background-color: white !important;
-          border-radius: 4px;
-          color: black !important;
-        }
-        .ant-menu-item-selected a {
-          color: black !important;
-        }
-        .ant-menu-submenu .ant-menu-item-selected {
-          background-color: white !important;
-          color: black !important;
-        }
-        .ant-menu-submenu .ant-menu-item {
-          background-color: transparent !important;
-          color: #fff; /* Default color for text */
-        }
-        .ant-menu-submenu .ant-menu-item:hover {
-          background-color: #f6e7ff !important;
-          color: black !important;
-        }
-        .ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline {
-          background-color: transparent !important;
-        }
-      `}</style>
     </div>
   );
 };

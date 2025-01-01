@@ -61,18 +61,18 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="p-6 rounded-lg text-white max-w-sm mx-auto">
+          <div className="p-6 rounded-lg max-w-sm mx-auto">
             <h1 className="font-semibold text-xl mb-2">Stay Update</h1>
             <p className="text-gray-300 mb-4">Get real time Update from us.</p>
             <div className="flex items-center rounded-lg overflow-hidden border border-gray-500 bg-[#002A12]">
               <Input
                 placeholder="Email"
-                className="border-none focus:outline-none py-2 text-white placeholder:text-gray-400 bg-transparent"
+                className="border-none focus:outline-none bg-white placeholder:text-gray-400 bg-transparent"
                 style={{ boxShadow: "none", border: "none" }}
               />
               <Button
                 type="primary"
-                className="bg-[#5BBE6A] text-white font-semibold hover:bg-[#4CA95B] h-7 me-1"
+                className="bg-[#5BBE6A] text-white font-semibold hover:bg-[#4CA95B]"
                 style={{
                   borderTopLeftRadius: 0,
                   borderBottomLeftRadius: 0,

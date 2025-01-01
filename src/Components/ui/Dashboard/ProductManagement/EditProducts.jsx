@@ -103,7 +103,6 @@ const EditProduct = () => {
               </Upload.Dragger>
             </Form.Item>
 
-            {/* Quantity Dropdown */}
             <div className="flex gap-5 items-center justify-center">
               <Form.Item
                 label="Quantity"
@@ -113,23 +112,16 @@ const EditProduct = () => {
                   { required: true, message: "Please select a quantity!" },
                 ]}
               >
-                <Select className="custom-select-height">
-                  <Option value="1 unit">1 unit</Option>
-                  <Option value="2 units">2 units</Option>
-                  <Option value="3 units">3 units</Option>
-                </Select>
+                <Input className="py-3" placeholder="Enter quantity" />
               </Form.Item>
 
               {/* Brand Input */}
               <Form.Item
                 label="Brand (If You Have)"
                 name="brand"
-                className="w-full py-5"
+                className="w-full"
               >
-                <Input
-                  className="py-5 custom-input-height"
-                  placeholder="Enter brand name"
-                />
+                <Input className="py-3" placeholder="Enter brand name" />
               </Form.Item>
             </div>
 
@@ -145,9 +137,9 @@ const EditProduct = () => {
               ]}
             >
               <TextArea
-                rows={4}
+                className=""
+                rows={6}
                 placeholder="Enter product description"
-                className="custom-textarea-height"
               />
             </Form.Item>
           </div>
@@ -161,11 +153,9 @@ const EditProduct = () => {
               rules={[
                 { required: true, message: "Please enter the product name!" },
               ]}
+              className="text-2xl"
             >
-              <Input
-                placeholder="Enter product name"
-                className="custom-input-height"
-              />
+              <Input className="py-3" placeholder="Enter product name" />
             </Form.Item>
 
             {/* Regular Price */}
@@ -177,7 +167,7 @@ const EditProduct = () => {
               ]}
             >
               <InputNumber
-                className="w-full custom-input-height"
+                className="w-full py-3"
                 placeholder="Enter regular price"
                 prefix="$"
                 min={0}
@@ -187,7 +177,7 @@ const EditProduct = () => {
             {/* Discount */}
             <Form.Item label="Discount (Optional)" name="discount">
               <InputNumber
-                className="w-full custom-input-height"
+                className="w-full py-3"
                 placeholder="Enter discount amount"
                 prefix="$"
                 min={0}
@@ -200,10 +190,7 @@ const EditProduct = () => {
               name="category"
               rules={[{ required: true, message: "Please select a category!" }]}
             >
-              <Select
-                placeholder="Select category"
-                className="custom-select-height"
-              >
+              <Select style={{ height: "55px" }} placeholder="Select category">
                 {categories.map((cat) => (
                   <Option key={cat} value={cat}>
                     {cat}
@@ -221,8 +208,8 @@ const EditProduct = () => {
               ]}
             >
               <Select
+                style={{ height: "55px" }}
                 placeholder="Select sub-category"
-                className="custom-select-height"
               >
                 {subCategories.map((sub) => (
                   <Option key={sub} value={sub}>

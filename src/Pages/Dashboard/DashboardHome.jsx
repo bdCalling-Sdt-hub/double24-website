@@ -23,19 +23,19 @@ const DashboardHome = () => {
   return (
     <div>
       <GeneralStateSection />
-      <div className="md:flex w-full items-center gap-6 mt-6">
-        <div className="md:w-5/12 bg-white border rounded-2xl py-3 flex flex-col justify-center">
+      <div className="flex w-full items-center mt-10 gap-6">
+        <div className="w-5/12 bg-white border rounded-2xl py-3 flex flex-col justify-center">
           <p className="text-base font-semibold px-4 py-">
             Sales and Revenue Tracking
           </p>
           <SalesTrackingChart />
         </div>
-        <div className="md:w-7/12 md:flex gap-4">
+        <div className="w-7/12 flex gap-4">
           <TopBuyersPage />
-          <div className="md:w-[40%] border rounded-2xl bg-white p-4 flex flex-col items-center">
+          <div className="w-[40%] border rounded-2xl bg-white p-4 flex flex-col items-center">
             <h1 className="text-lg font-semibold mb-4">Order Summary</h1>
 
-            <div className="relative w-40 h-40 mb-6">
+            <div className="relative w-40 h-40">
               <svg
                 className="absolute inset-0 transform -rotate-90"
                 viewBox="0 0 36 36"
@@ -92,8 +92,8 @@ const DashboardHome = () => {
         </div>
       </div>
       <div className="w-full md:flex gap-6">
-        <div className="md:w-5/12 my-6 "> {<RunningOrdersTable />}</div>
-        <div className="md:w-7/12 my-6 ">{<UserEngagement />}</div>
+        <div className="w-5/12 my-6 "> {<RunningOrdersTable />}</div>
+        <div className="w-7/12 my-6 ">{<UserEngagement />}</div>
       </div>
     </div>
   );
