@@ -208,10 +208,10 @@ const Checkout = () => {
       >
         <div className="flex flex-col items-center text-center py-20 justify-center">
           <FaCheckCircle className="text-[#005125]" size={80} />
-          <p className="my-2 font-bold text-[#005125]">
+          <p className="my-2 text-lg font-bold text-[#005125]">
             Thank you for your order! Your payment is complete.
           </p>
-          <p className=" text-[#005125]">
+          <p className=" text-gray-500">
             We’ll notify you as soon as your order is on its way. If you have
             any questions or need assistance, feel free to contact our support
             team.
