@@ -67,7 +67,7 @@ const TopBuyersPage = () => {
           const buyingRate = (
             (value.totalTransaction / totalTransactions) *
             100
-          ).toFixed(2); // Calculate percentage
+          ).toFixed(1);
           return (
             <div key={index} className="flex items-center gap-4">
               <img
@@ -75,7 +75,7 @@ const TopBuyersPage = () => {
                 src={value?.profileImg || randomImg}
                 alt={value?.name}
               />
-              <h1 className="text-sm font-medium w-32 truncate">
+              <h1 className="text-sm font-medium w-28 truncate">
                 {value?.name}
               </h1>
               <div className="flex items-center flex-1">
@@ -93,9 +93,7 @@ const TopBuyersPage = () => {
                   ></div>
                 </div>
               </div>
-              <p className="text-sm font-medium">
-                {buyingRate}% ({value?.totalTransaction})
-              </p>
+              <p className="text-sm font-medium">{buyingRate}%</p>
             </div>
           );
         })}

@@ -27,8 +27,9 @@ const Banner = () => {
             for a Healthier Lifestyle
           </h1>
           <p className="md:text-xl text-sm mx-auto font-fontThree w-[70%] md:w-[40%]">
-            Explore our wide selection of high-quality hemp flowers, CBD
-            products, and more. Experience the natural benefits of hemp today!
+            Explore our wide selection of high-quality bulk hemp flower,
+            packaged products, and more. Experience the natural benefits of hemp
+            today!
           </p>
           <div className="md:my-5 my-2">
             <Link to={"/shop/category/1"}>

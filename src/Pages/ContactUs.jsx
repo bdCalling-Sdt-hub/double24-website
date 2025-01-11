@@ -48,7 +48,7 @@ const ContactUs = () => {
                 {/* Full Name */}
                 <Form.Item
                   name="fullName"
-                  label={<span className="text-white">Full Name</span>}
+                  label={<span className="text-white">Business Name</span>}
                   rules={[
                     { required: true, message: "Please enter your full name" },
                   ]}

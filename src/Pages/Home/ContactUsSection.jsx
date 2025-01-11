@@ -29,7 +29,7 @@ const ContactUsSection = () => {
             with us for unbeatable wholesale prices and quality products.
           </p>
 
-          <div className="space-y-8 mt-10 ms-5 md:ms:0 w-[80%] md:w-[65%]">
+          <div className="space-y-8 mt-10 ms-5 md:ms:0 w-[80%]">
             <div className="relative">
               <div className="bg-white p-5 ps-12 px-8 rounded-lg">
                 <h3 className="text-[#00863D]">Email</h3>

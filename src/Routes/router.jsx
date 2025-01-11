@@ -29,6 +29,7 @@ import ChangePassword from "../Pages/Auth/ChangePassword";
 import PersonalInfo from "../Components/ui/Dashboard/Settings/PersonalInfo";
 import Notifications from "../Pages/Dashboard/Notifications";
 import FaqManagement from "../Components/ui/Dashboard/FaqManagement";
+import UpdateAboutUs from "../Components/ui/Dashboard/UpdateAboutUs";
 
 export const router = createBrowserRouter([
   {
@@ -136,6 +137,10 @@ export const router = createBrowserRouter([
       {
         path: "faq-management",
         element: <FaqManagement />,
+      },
+      {
+        path: "update-about-us",
+        element: <UpdateAboutUs />,
       },
     ],
   },
